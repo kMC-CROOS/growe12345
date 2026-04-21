@@ -1,0 +1,45 @@
+{
+  "name": "growe-backend",
+  "version": "1.0.0",
+  "description": "GROWE API — copy .env.example to .env, set DATABASE_URL + JWT_SECRET, then npm run migrate && npm run seed",
+  "main": "server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "maildev": "maildev",
+    "mailpit": "maildev",
+    "test": "node --test src/utils/timeUtils.test.js src/utils/slotGenerator.test.js src/validation/assignment.schema.test.js",
+    "db:check": "node scripts/dbCheck.js",
+    "migrate": "node src/config/runMigrations.js",
+    "seed": "node src/config/runSeeds.js",
+    "resend:test": "node scripts/resendTestEmail.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "google-auth-library": "^10.6.2",
+    "helmet": "^7.1.0",
+    "joi": "^18.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.14",
+    "pg": "^8.13.0",
+    "resend": "^6.9.4",
+    "sanitize-html": "^2.17.2",
+    "socket.io": "^4.7.5",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "maildev": "^2.2.1"
+  }
+}
