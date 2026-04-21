@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # GROWE - Academic Collaboration Platform
 
@@ -152,3 +153,6 @@ Requires `growe-backend/.env` and a running PostgreSQL (or use a `db` service in
 4. Groups → create → invite / member search → add member
 5. Tutors → availability → schedule meeting from group
 6. Meeting room → join with second user (WebRTC)
+=======
+# growe12345
+>>>>>>> dc19b68f3dad424e0ef0b19d75f8b229754dad5f
